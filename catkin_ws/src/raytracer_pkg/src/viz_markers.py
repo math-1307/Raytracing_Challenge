@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
+import tf
+
 import rospy
 from visualization_msgs.msg import Marker
 from visualization_msgs.msg import MarkerArray
 from geometry_msgs.msg import Point
 from geometry_msgs.msg import Quaternion
-
+#from raytracer_pkg.LiDAR import LiDAR
+import numpy as np
+a = np.linspace(-1,1)
+print(a)
 class LiDAR:
 
 	def __init__(self,lidar_num,point,orient):
@@ -15,16 +20,16 @@ class LiDAR:
 		self.lidar_marker = Marker()
 		self.lidar_marker.ns = "LiDAR"
 		self.lidar_marker.id = lidar_num
-		self.lidar_marker.header.frame_id = "/world"
+		self.lidar_marker.header.frame_id = "world"
 		self.lidar_marker.header.stamp = rospy.get_rostime()
 		self.lidar_marker.type = Marker.CUBE
 		self.lidar_marker.action = Marker.ADD
 		self.lidar_marker.lifetime = rospy.Duration(0)
 
 		# LiDAR Scale Values (dimensions)
-		self.lidar_marker.scale.x = 1.0
-		self.lidar_marker.scale.y = 1.0
-		self.lidar_marker.scale.z = 1.0
+		self.lidar_marker.scale.x = 0.1
+		self.lidar_marker.scale.y = 0.1
+		self.lidar_marker.scale.z = 0.1
 		
 		# LiDAR Colour
 		self.lidar_marker.color.r = 0.0
@@ -49,16 +54,16 @@ class Wall:
 		self.wall_marker = Marker()
 		self.wall_marker.ns = "Wall"
 		self.wall_marker.id = 1
-		self.wall_marker.header.frame_id = "/world"
+		self.wall_marker.header.frame_id = "world"
 		self.wall_marker.header.stamp    = rospy.get_rostime()
 		self.wall_marker.type = Marker.CUBE
 		self.wall_marker.action = Marker.ADD
 		self.wall_marker.lifetime = rospy.Duration(0)
 		
 		# Wall Scale Values (dimensions)
-		self.wall_marker.scale.x = 1.0
-		self.wall_marker.scale.y = 1.0
-		self.wall_marker.scale.z = 1.0
+		self.wall_marker.scale.x = 0.5
+		self.wall_marker.scale.y = 20.0
+		self.wall_marker.scale.z = 5.0
 		
 		# LiDAR Colour
 		self.wall_marker.color.r = 1.0
@@ -95,7 +100,7 @@ if __name__ == '__main__':
 		lidar_orient.z = 0
 		lidar_orient.w = 1
 		wall_pos = Point()
-		wall_pos.x = 1.0
+		wall_pos.x = 20.0
 		wall_pos.y = 1.0
 		wall_pos.z = 1.0
 		wall_orient = Quaternion()
@@ -112,6 +117,12 @@ if __name__ == '__main__':
 		lidar1.pub_lidar_marker.publish(lidar1.lidar_marker)
 		wall1.pub_wall_marker.publish(wall1.wall_marker)
 		
+		br = tf.TransformBroadcaster()
+		br.sendTransform((20.0, 0.0, 0.0),
+				(0.0, 0.0, 0.0, 1.0),
+				rospy.Time.now(),
+				"wall_frame",
+				"/world")
+		
 		rate.sleep()
-
 

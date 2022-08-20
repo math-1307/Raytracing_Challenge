@@ -119,7 +119,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-# ${catkin_INCLUDE_DIRS}
+
 )
 
 ## Declare a C++ library
@@ -207,6 +207,15 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+
 catkin_install_python(PROGRAMS src/viz_markers.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+catkin_install_python(PROGRAMS src/LiDAR.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+catkin_install_python(PROGRAMS src/raytracer.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
