@@ -1,0 +1,9 @@
+http://wiki.ros.org/tf
+
+http://wiki.ros.org/rviz/DisplayTypes/Marker
+
+http://docs.ros.org/en/api/visualization_msgs/html/msg/MarkerArray.html
+
+https://answers.ros.org/question/69754/quaternion-transformations-in-python/
+
+http://wiki.ros.org/rviz/DisplayTypes/Marker

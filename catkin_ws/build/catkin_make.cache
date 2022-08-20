@@ -1,0 +1,2 @@
+raytracer_pkg
+-DCATKIN_DEVEL_PREFIX=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/install -G Unix Makefiles

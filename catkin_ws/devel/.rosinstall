@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/setup.sh
