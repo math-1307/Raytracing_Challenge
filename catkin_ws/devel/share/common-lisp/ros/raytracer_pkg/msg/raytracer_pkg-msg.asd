@@ -6,6 +6,8 @@
                :std_msgs-msg
 )
   :components ((:file "_package")
+    (:file "rayArray" :depends-on ("_package_rayArray"))
+    (:file "_package_rayArray" :depends-on ("_package"))
     (:file "represent_plane" :depends-on ("_package_represent_plane"))
     (:file "_package_represent_plane" :depends-on ("_package"))
     (:file "represent_ray" :depends-on ("_package_represent_ray"))

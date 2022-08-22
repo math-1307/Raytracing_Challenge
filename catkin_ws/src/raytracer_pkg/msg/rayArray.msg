@@ -1,0 +1,1 @@
+represent_ray[] rays

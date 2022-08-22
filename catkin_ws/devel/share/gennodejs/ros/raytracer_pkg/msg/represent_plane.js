@@ -21,7 +21,10 @@ class represent_plane {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.header = null;
-      this.point = null;
+      this.corner1 = null;
+      this.corner2 = null;
+      this.corner3 = null;
+      this.corner4 = null;
       this.normal = null;
     }
     else {
@@ -31,11 +34,29 @@ class represent_plane {
       else {
         this.header = new std_msgs.msg.Header();
       }
-      if (initObj.hasOwnProperty('point')) {
-        this.point = initObj.point
+      if (initObj.hasOwnProperty('corner1')) {
+        this.corner1 = initObj.corner1
       }
       else {
-        this.point = new geometry_msgs.msg.Point();
+        this.corner1 = new geometry_msgs.msg.Point();
+      }
+      if (initObj.hasOwnProperty('corner2')) {
+        this.corner2 = initObj.corner2
+      }
+      else {
+        this.corner2 = new geometry_msgs.msg.Point();
+      }
+      if (initObj.hasOwnProperty('corner3')) {
+        this.corner3 = initObj.corner3
+      }
+      else {
+        this.corner3 = new geometry_msgs.msg.Point();
+      }
+      if (initObj.hasOwnProperty('corner4')) {
+        this.corner4 = initObj.corner4
+      }
+      else {
+        this.corner4 = new geometry_msgs.msg.Point();
       }
       if (initObj.hasOwnProperty('normal')) {
         this.normal = initObj.normal
@@ -50,8 +71,14 @@ class represent_plane {
     // Serializes a message object of type represent_plane
     // Serialize message field [header]
     bufferOffset = std_msgs.msg.Header.serialize(obj.header, buffer, bufferOffset);
-    // Serialize message field [point]
-    bufferOffset = geometry_msgs.msg.Point.serialize(obj.point, buffer, bufferOffset);
+    // Serialize message field [corner1]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.corner1, buffer, bufferOffset);
+    // Serialize message field [corner2]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.corner2, buffer, bufferOffset);
+    // Serialize message field [corner3]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.corner3, buffer, bufferOffset);
+    // Serialize message field [corner4]
+    bufferOffset = geometry_msgs.msg.Point.serialize(obj.corner4, buffer, bufferOffset);
     // Serialize message field [normal]
     bufferOffset = geometry_msgs.msg.Vector3.serialize(obj.normal, buffer, bufferOffset);
     return bufferOffset;
@@ -63,8 +90,14 @@ class represent_plane {
     let data = new represent_plane(null);
     // Deserialize message field [header]
     data.header = std_msgs.msg.Header.deserialize(buffer, bufferOffset);
-    // Deserialize message field [point]
-    data.point = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [corner1]
+    data.corner1 = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [corner2]
+    data.corner2 = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [corner3]
+    data.corner3 = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
+    // Deserialize message field [corner4]
+    data.corner4 = geometry_msgs.msg.Point.deserialize(buffer, bufferOffset);
     // Deserialize message field [normal]
     data.normal = geometry_msgs.msg.Vector3.deserialize(buffer, bufferOffset);
     return data;
@@ -73,7 +106,7 @@ class represent_plane {
   static getMessageSize(object) {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.header);
-    return length + 48;
+    return length + 120;
   }
 
   static datatype() {
@@ -83,14 +116,17 @@ class represent_plane {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'e6dad39e8527110ab026c6017616f37b';
+    return '29f9b3d844ed52a85b0f1b939894669b';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
       Header header
-      geometry_msgs/Point point
+      geometry_msgs/Point corner1
+      geometry_msgs/Point corner2
+      geometry_msgs/Point corner3
+      geometry_msgs/Point corner4
       geometry_msgs/Vector3 normal
     
     ================================================================================
@@ -144,11 +180,32 @@ class represent_plane {
       resolved.header = new std_msgs.msg.Header()
     }
 
-    if (msg.point !== undefined) {
-      resolved.point = geometry_msgs.msg.Point.Resolve(msg.point)
+    if (msg.corner1 !== undefined) {
+      resolved.corner1 = geometry_msgs.msg.Point.Resolve(msg.corner1)
     }
     else {
-      resolved.point = new geometry_msgs.msg.Point()
+      resolved.corner1 = new geometry_msgs.msg.Point()
+    }
+
+    if (msg.corner2 !== undefined) {
+      resolved.corner2 = geometry_msgs.msg.Point.Resolve(msg.corner2)
+    }
+    else {
+      resolved.corner2 = new geometry_msgs.msg.Point()
+    }
+
+    if (msg.corner3 !== undefined) {
+      resolved.corner3 = geometry_msgs.msg.Point.Resolve(msg.corner3)
+    }
+    else {
+      resolved.corner3 = new geometry_msgs.msg.Point()
+    }
+
+    if (msg.corner4 !== undefined) {
+      resolved.corner4 = geometry_msgs.msg.Point.Resolve(msg.corner4)
+    }
+    else {
+      resolved.corner4 = new geometry_msgs.msg.Point()
     }
 
     if (msg.normal !== undefined) {

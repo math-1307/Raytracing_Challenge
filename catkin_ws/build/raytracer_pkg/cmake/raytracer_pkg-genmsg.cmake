@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "raytracer_pkg: 2 messages, 0 services")
+message(STATUS "raytracer_pkg: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Iraytracer_pkg:/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
@@ -19,12 +19,17 @@ add_custom_target(raytracer_pkg_generate_messages ALL)
 
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg" NAME_WE)
 add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg" "geometry_msgs/Point:geometry_msgs/Vector3:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg" "geometry_msgs/Vector3:geometry_msgs/Point:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
 add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" "geometry_msgs/Point:geometry_msgs/Vector3:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" "geometry_msgs/Vector3:geometry_msgs/Point:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
+add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" "geometry_msgs/Vector3:raytracer_pkg/represent_ray:geometry_msgs/Point:std_msgs/Header"
 )
 
 #
@@ -36,13 +41,19 @@ add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/raytracer_pkg
 )
 _generate_msg_cpp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/raytracer_pkg
+)
+_generate_msg_cpp(raytracer_pkg
+  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -64,6 +75,8 @@ get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catk
 add_dependencies(raytracer_pkg_generate_messages_cpp _raytracer_pkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_cpp _raytracer_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
+add_dependencies(raytracer_pkg_generate_messages_cpp _raytracer_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(raytracer_pkg_gencpp)
@@ -77,13 +90,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS raytracer_pkg_generate_messages_cpp
 _generate_msg_eus(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/raytracer_pkg
 )
 _generate_msg_eus(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/raytracer_pkg
+)
+_generate_msg_eus(raytracer_pkg
+  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -105,6 +124,8 @@ get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catk
 add_dependencies(raytracer_pkg_generate_messages_eus _raytracer_pkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_eus _raytracer_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
+add_dependencies(raytracer_pkg_generate_messages_eus _raytracer_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(raytracer_pkg_geneus)
@@ -118,13 +139,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS raytracer_pkg_generate_messages_eus
 _generate_msg_lisp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/raytracer_pkg
 )
 _generate_msg_lisp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/raytracer_pkg
+)
+_generate_msg_lisp(raytracer_pkg
+  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -146,6 +173,8 @@ get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catk
 add_dependencies(raytracer_pkg_generate_messages_lisp _raytracer_pkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_lisp _raytracer_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
+add_dependencies(raytracer_pkg_generate_messages_lisp _raytracer_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(raytracer_pkg_genlisp)
@@ -159,13 +188,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS raytracer_pkg_generate_messages_lis
 _generate_msg_nodejs(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/raytracer_pkg
 )
 _generate_msg_nodejs(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/raytracer_pkg
+)
+_generate_msg_nodejs(raytracer_pkg
+  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -187,6 +222,8 @@ get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catk
 add_dependencies(raytracer_pkg_generate_messages_nodejs _raytracer_pkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_nodejs _raytracer_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
+add_dependencies(raytracer_pkg_generate_messages_nodejs _raytracer_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(raytracer_pkg_gennodejs)
@@ -200,13 +237,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS raytracer_pkg_generate_messages_nod
 _generate_msg_py(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
 )
 _generate_msg_py(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
+)
+_generate_msg_py(raytracer_pkg
+  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -227,6 +270,8 @@ add_dependencies(raytracer_pkg_generate_messages raytracer_pkg_generate_messages
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_py _raytracer_pkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg" NAME_WE)
+add_dependencies(raytracer_pkg_generate_messages_py _raytracer_pkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
 add_dependencies(raytracer_pkg_generate_messages_py _raytracer_pkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

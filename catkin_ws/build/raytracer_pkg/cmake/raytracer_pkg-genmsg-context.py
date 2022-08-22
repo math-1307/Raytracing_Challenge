@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
+messages_str = "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
 services_str = ""
 pkg_name = "raytracer_pkg"
 dependencies_str = "std_msgs;geometry_msgs"

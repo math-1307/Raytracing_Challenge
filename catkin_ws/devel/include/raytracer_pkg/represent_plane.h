@@ -17,6 +17,9 @@
 
 #include <std_msgs/Header.h>
 #include <geometry_msgs/Point.h>
+#include <geometry_msgs/Point.h>
+#include <geometry_msgs/Point.h>
+#include <geometry_msgs/Point.h>
 #include <geometry_msgs/Vector3.h>
 
 namespace raytracer_pkg
@@ -28,12 +31,18 @@ struct represent_plane_
 
   represent_plane_()
     : header()
-    , point()
+    , corner1()
+    , corner2()
+    , corner3()
+    , corner4()
     , normal()  {
     }
   represent_plane_(const ContainerAllocator& _alloc)
     : header(_alloc)
-    , point(_alloc)
+    , corner1(_alloc)
+    , corner2(_alloc)
+    , corner3(_alloc)
+    , corner4(_alloc)
     , normal(_alloc)  {
   (void)_alloc;
     }
@@ -43,8 +52,17 @@ struct represent_plane_
    typedef  ::std_msgs::Header_<ContainerAllocator>  _header_type;
   _header_type header;
 
-   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _point_type;
-  _point_type point;
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _corner1_type;
+  _corner1_type corner1;
+
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _corner2_type;
+  _corner2_type corner2;
+
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _corner3_type;
+  _corner3_type corner3;
+
+   typedef  ::geometry_msgs::Point_<ContainerAllocator>  _corner4_type;
+  _corner4_type corner4;
 
    typedef  ::geometry_msgs::Vector3_<ContainerAllocator>  _normal_type;
   _normal_type normal;
@@ -79,7 +97,10 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::raytracer_pkg::represent_plane_<ContainerAllocator1> & lhs, const ::raytracer_pkg::represent_plane_<ContainerAllocator2> & rhs)
 {
   return lhs.header == rhs.header &&
-    lhs.point == rhs.point &&
+    lhs.corner1 == rhs.corner1 &&
+    lhs.corner2 == rhs.corner2 &&
+    lhs.corner3 == rhs.corner3 &&
+    lhs.corner4 == rhs.corner4 &&
     lhs.normal == rhs.normal;
 }
 
@@ -137,12 +158,12 @@ struct MD5Sum< ::raytracer_pkg::represent_plane_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "e6dad39e8527110ab026c6017616f37b";
+    return "29f9b3d844ed52a85b0f1b939894669b";
   }
 
   static const char* value(const ::raytracer_pkg::represent_plane_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xe6dad39e8527110aULL;
-  static const uint64_t static_value2 = 0xb026c6017616f37bULL;
+  static const uint64_t static_value1 = 0x29f9b3d844ed52a8ULL;
+  static const uint64_t static_value2 = 0x5b0f1b939894669bULL;
 };
 
 template<class ContainerAllocator>
@@ -162,7 +183,10 @@ struct Definition< ::raytracer_pkg::represent_plane_<ContainerAllocator> >
   static const char* value()
   {
     return "  Header header\n"
-"  geometry_msgs/Point point\n"
+"  geometry_msgs/Point corner1\n"
+"  geometry_msgs/Point corner2\n"
+"  geometry_msgs/Point corner3\n"
+"  geometry_msgs/Point corner4\n"
 "  geometry_msgs/Vector3 normal\n"
 "\n"
 "================================================================================\n"
@@ -219,7 +243,10 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.header);
-      stream.next(m.point);
+      stream.next(m.corner1);
+      stream.next(m.corner2);
+      stream.next(m.corner3);
+      stream.next(m.corner4);
       stream.next(m.normal);
     }
 
@@ -242,9 +269,18 @@ struct Printer< ::raytracer_pkg::represent_plane_<ContainerAllocator> >
     s << indent << "header: ";
     s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    s << indent << "point: ";
+    s << indent << "corner1: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.point);
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.corner1);
+    s << indent << "corner2: ";
+    s << std::endl;
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.corner2);
+    s << indent << "corner3: ";
+    s << std::endl;
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.corner3);
+    s << indent << "corner4: ";
+    s << std::endl;
+    Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.corner4);
     s << indent << "normal: ";
     s << std::endl;
     Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.normal);

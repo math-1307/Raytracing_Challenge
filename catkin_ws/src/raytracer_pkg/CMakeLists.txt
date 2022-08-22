@@ -20,7 +20,6 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
 )
 
-
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -55,6 +54,7 @@ add_message_files(
   FILES
   represent_plane.msg
   represent_ray.msg
+  rayArray.msg
 )
 
 ## Generate services in the 'srv' folder

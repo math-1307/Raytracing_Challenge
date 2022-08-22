@@ -18,18 +18,24 @@
 
 (defclass raytracer_pkg::represent_plane
   :super ros::object
-  :slots (_header _point _normal ))
+  :slots (_header _corner1 _corner2 _corner3 _corner4 _normal ))
 
 (defmethod raytracer_pkg::represent_plane
   (:init
    (&key
     ((:header __header) (instance std_msgs::Header :init))
-    ((:point __point) (instance geometry_msgs::Point :init))
+    ((:corner1 __corner1) (instance geometry_msgs::Point :init))
+    ((:corner2 __corner2) (instance geometry_msgs::Point :init))
+    ((:corner3 __corner3) (instance geometry_msgs::Point :init))
+    ((:corner4 __corner4) (instance geometry_msgs::Point :init))
     ((:normal __normal) (instance geometry_msgs::Vector3 :init))
     )
    (send-super :init)
    (setq _header __header)
-   (setq _point __point)
+   (setq _corner1 __corner1)
+   (setq _corner2 __corner2)
+   (setq _corner3 __corner3)
+   (setq _corner4 __corner4)
    (setq _normal __normal)
    self)
   (:header
@@ -39,13 +45,34 @@
      (progn
        (if __header (setq _header (car __header)))
        _header)))
-  (:point
-   (&rest __point)
-   (if (keywordp (car __point))
-       (send* _point __point)
+  (:corner1
+   (&rest __corner1)
+   (if (keywordp (car __corner1))
+       (send* _corner1 __corner1)
      (progn
-       (if __point (setq _point (car __point)))
-       _point)))
+       (if __corner1 (setq _corner1 (car __corner1)))
+       _corner1)))
+  (:corner2
+   (&rest __corner2)
+   (if (keywordp (car __corner2))
+       (send* _corner2 __corner2)
+     (progn
+       (if __corner2 (setq _corner2 (car __corner2)))
+       _corner2)))
+  (:corner3
+   (&rest __corner3)
+   (if (keywordp (car __corner3))
+       (send* _corner3 __corner3)
+     (progn
+       (if __corner3 (setq _corner3 (car __corner3)))
+       _corner3)))
+  (:corner4
+   (&rest __corner4)
+   (if (keywordp (car __corner4))
+       (send* _corner4 __corner4)
+     (progn
+       (if __corner4 (setq _corner4 (car __corner4)))
+       _corner4)))
   (:normal
    (&rest __normal)
    (if (keywordp (car __normal))
@@ -58,8 +85,14 @@
    (+
     ;; std_msgs/Header _header
     (send _header :serialization-length)
-    ;; geometry_msgs/Point _point
-    (send _point :serialization-length)
+    ;; geometry_msgs/Point _corner1
+    (send _corner1 :serialization-length)
+    ;; geometry_msgs/Point _corner2
+    (send _corner2 :serialization-length)
+    ;; geometry_msgs/Point _corner3
+    (send _corner3 :serialization-length)
+    ;; geometry_msgs/Point _corner4
+    (send _corner4 :serialization-length)
     ;; geometry_msgs/Vector3 _normal
     (send _normal :serialization-length)
     ))
@@ -69,8 +102,14 @@
               (make-string-output-stream (send self :serialization-length)))))
      ;; std_msgs/Header _header
        (send _header :serialize s)
-     ;; geometry_msgs/Point _point
-       (send _point :serialize s)
+     ;; geometry_msgs/Point _corner1
+       (send _corner1 :serialize s)
+     ;; geometry_msgs/Point _corner2
+       (send _corner2 :serialize s)
+     ;; geometry_msgs/Point _corner3
+       (send _corner3 :serialize s)
+     ;; geometry_msgs/Point _corner4
+       (send _corner4 :serialize s)
      ;; geometry_msgs/Vector3 _normal
        (send _normal :serialize s)
      ;;
@@ -79,19 +118,28 @@
    (buf &optional (ptr- 0))
    ;; std_msgs/Header _header
      (send _header :deserialize buf ptr-) (incf ptr- (send _header :serialization-length))
-   ;; geometry_msgs/Point _point
-     (send _point :deserialize buf ptr-) (incf ptr- (send _point :serialization-length))
+   ;; geometry_msgs/Point _corner1
+     (send _corner1 :deserialize buf ptr-) (incf ptr- (send _corner1 :serialization-length))
+   ;; geometry_msgs/Point _corner2
+     (send _corner2 :deserialize buf ptr-) (incf ptr- (send _corner2 :serialization-length))
+   ;; geometry_msgs/Point _corner3
+     (send _corner3 :deserialize buf ptr-) (incf ptr- (send _corner3 :serialization-length))
+   ;; geometry_msgs/Point _corner4
+     (send _corner4 :deserialize buf ptr-) (incf ptr- (send _corner4 :serialization-length))
    ;; geometry_msgs/Vector3 _normal
      (send _normal :deserialize buf ptr-) (incf ptr- (send _normal :serialization-length))
    ;;
    self)
   )
 
-(setf (get raytracer_pkg::represent_plane :md5sum-) "e6dad39e8527110ab026c6017616f37b")
+(setf (get raytracer_pkg::represent_plane :md5sum-) "29f9b3d844ed52a85b0f1b939894669b")
 (setf (get raytracer_pkg::represent_plane :datatype-) "raytracer_pkg/represent_plane")
 (setf (get raytracer_pkg::represent_plane :definition-)
       "  Header header
-  geometry_msgs/Point point
+  geometry_msgs/Point corner1
+  geometry_msgs/Point corner2
+  geometry_msgs/Point corner3
+  geometry_msgs/Point corner4
   geometry_msgs/Vector3 normal
 
 ================================================================================
@@ -133,6 +181,6 @@ float64 z
 
 
 
-(provide :raytracer_pkg/represent_plane "e6dad39e8527110ab026c6017616f37b")
+(provide :raytracer_pkg/represent_plane "29f9b3d844ed52a85b0f1b939894669b")
 
 

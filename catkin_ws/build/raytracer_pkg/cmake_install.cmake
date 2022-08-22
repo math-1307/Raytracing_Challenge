@@ -45,6 +45,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/raytracer_pkg/msg" TYPE FILE FILES
     "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_plane.msg"
     "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
+    "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
     )
 endif()
 

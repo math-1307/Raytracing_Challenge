@@ -10,11 +10,14 @@ import geometry_msgs.msg
 import std_msgs.msg
 
 class represent_plane(genpy.Message):
-  _md5sum = "e6dad39e8527110ab026c6017616f37b"
+  _md5sum = "29f9b3d844ed52a85b0f1b939894669b"
   _type = "raytracer_pkg/represent_plane"
   _has_header = True  # flag to mark the presence of a Header object
   _full_text = """  Header header
-  geometry_msgs/Point point
+  geometry_msgs/Point corner1
+  geometry_msgs/Point corner2
+  geometry_msgs/Point corner3
+  geometry_msgs/Point corner4
   geometry_msgs/Vector3 normal
 
 ================================================================================
@@ -52,8 +55,8 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 float64 z"""
-  __slots__ = ['header','point','normal']
-  _slot_types = ['std_msgs/Header','geometry_msgs/Point','geometry_msgs/Vector3']
+  __slots__ = ['header','corner1','corner2','corner3','corner4','normal']
+  _slot_types = ['std_msgs/Header','geometry_msgs/Point','geometry_msgs/Point','geometry_msgs/Point','geometry_msgs/Point','geometry_msgs/Vector3']
 
   def __init__(self, *args, **kwds):
     """
@@ -63,7 +66,7 @@ float64 z"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       header,point,normal
+       header,corner1,corner2,corner3,corner4,normal
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -74,13 +77,22 @@ float64 z"""
       # message fields cannot be None, assign default values for those that are
       if self.header is None:
         self.header = std_msgs.msg.Header()
-      if self.point is None:
-        self.point = geometry_msgs.msg.Point()
+      if self.corner1 is None:
+        self.corner1 = geometry_msgs.msg.Point()
+      if self.corner2 is None:
+        self.corner2 = geometry_msgs.msg.Point()
+      if self.corner3 is None:
+        self.corner3 = geometry_msgs.msg.Point()
+      if self.corner4 is None:
+        self.corner4 = geometry_msgs.msg.Point()
       if self.normal is None:
         self.normal = geometry_msgs.msg.Vector3()
     else:
       self.header = std_msgs.msg.Header()
-      self.point = geometry_msgs.msg.Point()
+      self.corner1 = geometry_msgs.msg.Point()
+      self.corner2 = geometry_msgs.msg.Point()
+      self.corner3 = geometry_msgs.msg.Point()
+      self.corner4 = geometry_msgs.msg.Point()
       self.normal = geometry_msgs.msg.Vector3()
 
   def _get_types(self):
@@ -104,7 +116,7 @@ float64 z"""
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_6d().pack(_x.point.x, _x.point.y, _x.point.z, _x.normal.x, _x.normal.y, _x.normal.z))
+      buff.write(_get_struct_15d().pack(_x.corner1.x, _x.corner1.y, _x.corner1.z, _x.corner2.x, _x.corner2.y, _x.corner2.z, _x.corner3.x, _x.corner3.y, _x.corner3.z, _x.corner4.x, _x.corner4.y, _x.corner4.z, _x.normal.x, _x.normal.y, _x.normal.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -118,8 +130,14 @@ float64 z"""
     try:
       if self.header is None:
         self.header = std_msgs.msg.Header()
-      if self.point is None:
-        self.point = geometry_msgs.msg.Point()
+      if self.corner1 is None:
+        self.corner1 = geometry_msgs.msg.Point()
+      if self.corner2 is None:
+        self.corner2 = geometry_msgs.msg.Point()
+      if self.corner3 is None:
+        self.corner3 = geometry_msgs.msg.Point()
+      if self.corner4 is None:
+        self.corner4 = geometry_msgs.msg.Point()
       if self.normal is None:
         self.normal = geometry_msgs.msg.Vector3()
       end = 0
@@ -138,8 +156,8 @@ float64 z"""
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 48
-      (_x.point.x, _x.point.y, _x.point.z, _x.normal.x, _x.normal.y, _x.normal.z,) = _get_struct_6d().unpack(str[start:end])
+      end += 120
+      (_x.corner1.x, _x.corner1.y, _x.corner1.z, _x.corner2.x, _x.corner2.y, _x.corner2.z, _x.corner3.x, _x.corner3.y, _x.corner3.z, _x.corner4.x, _x.corner4.y, _x.corner4.z, _x.normal.x, _x.normal.y, _x.normal.z,) = _get_struct_15d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -161,7 +179,7 @@ float64 z"""
         length = len(_x)
       buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_6d().pack(_x.point.x, _x.point.y, _x.point.z, _x.normal.x, _x.normal.y, _x.normal.z))
+      buff.write(_get_struct_15d().pack(_x.corner1.x, _x.corner1.y, _x.corner1.z, _x.corner2.x, _x.corner2.y, _x.corner2.z, _x.corner3.x, _x.corner3.y, _x.corner3.z, _x.corner4.x, _x.corner4.y, _x.corner4.z, _x.normal.x, _x.normal.y, _x.normal.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -176,8 +194,14 @@ float64 z"""
     try:
       if self.header is None:
         self.header = std_msgs.msg.Header()
-      if self.point is None:
-        self.point = geometry_msgs.msg.Point()
+      if self.corner1 is None:
+        self.corner1 = geometry_msgs.msg.Point()
+      if self.corner2 is None:
+        self.corner2 = geometry_msgs.msg.Point()
+      if self.corner3 is None:
+        self.corner3 = geometry_msgs.msg.Point()
+      if self.corner4 is None:
+        self.corner4 = geometry_msgs.msg.Point()
       if self.normal is None:
         self.normal = geometry_msgs.msg.Vector3()
       end = 0
@@ -196,8 +220,8 @@ float64 z"""
         self.header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 48
-      (_x.point.x, _x.point.y, _x.point.z, _x.normal.x, _x.normal.y, _x.normal.z,) = _get_struct_6d().unpack(str[start:end])
+      end += 120
+      (_x.corner1.x, _x.corner1.y, _x.corner1.z, _x.corner2.x, _x.corner2.y, _x.corner2.z, _x.corner3.x, _x.corner3.y, _x.corner3.z, _x.corner4.x, _x.corner4.y, _x.corner4.z, _x.normal.x, _x.normal.y, _x.normal.z,) = _get_struct_15d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -206,15 +230,15 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_15d = None
+def _get_struct_15d():
+    global _struct_15d
+    if _struct_15d is None:
+        _struct_15d = struct.Struct("<15d")
+    return _struct_15d
 _struct_3I = None
 def _get_struct_3I():
     global _struct_3I
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_6d = None
-def _get_struct_6d():
-    global _struct_6d
-    if _struct_6d is None:
-        _struct_6d = struct.Struct("<6d")
-    return _struct_6d
