@@ -8,3 +8,4 @@
 
 # modified environment variables
 export PWD='/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build'
+export PYTHONPATH="/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"

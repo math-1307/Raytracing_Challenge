@@ -403,6 +403,9 @@ gennodejs_DIR:PATH=/opt/ros/noetic/share/gennodejs/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/noetic/share/genpy/cmake
 
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/noetic/share/geometry_msgs/cmake
+
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/gtest/googlemock
 
@@ -460,6 +463,8 @@ message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
 raytracer_pkg_BINARY_DIR:STATIC=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg
+
+raytracer_pkg_DIR:PATH=
 
 //Value Computed by CMake
 raytracer_pkg_SOURCE_DIR:STATIC=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg
