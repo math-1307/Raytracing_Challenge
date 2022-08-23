@@ -8,6 +8,9 @@ Panels:
         - /Status1
         - /Grid1
         - /Axes2
+        - /PointCloud21
+        - /PointCloud22
+        - /PointCloud23
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz/Selection
@@ -37,7 +40,7 @@ Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
-      Cell Size: 10
+      Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
       Enabled: true
@@ -91,8 +94,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 3.3890867233276367
-        Min Value: -3.1532483100891113
+        Max Value: 3.394299030303955
+        Min Value: -3.144853115081787
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -119,8 +122,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 3.829821825027466
-        Min Value: -4.008630752563477
+        Max Value: 3.825345993041992
+        Min Value: -3.9557113647460938
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -128,7 +131,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: AxisColor
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
@@ -143,7 +146,7 @@ Visualization Manager:
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Class: rviz/Marker
       Enabled: true
       Marker Topic: /lidar3
@@ -155,8 +158,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 3.784493923187256
-        Min Value: -4.020448684692383
+        Max Value: 3.8028647899627686
+        Min Value: -4.007848262786865
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -216,7 +219,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 29.322534561157227
+      Distance: 18.76242446899414
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -224,17 +227,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 7.077956199645996
-        Y: -0.5643396973609924
-        Z: 5.341245651245117
+        X: 18.45630645751953
+        Y: -1.9312320947647095
+        Z: 1.096503496170044
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.06020312383770943
+      Pitch: 0.12479739636182785
       Target Frame: <Fixed Frame>
-      Yaw: 2.973585844039917
+      Yaw: 1.485409140586853
     Saved:
       - Class: rviz/Orbit
         Distance: 12.761958122253418
