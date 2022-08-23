@@ -7,7 +7,7 @@ Panels:
         - /Global Options1
         - /Status1
         - /Grid1
-        - /PointCloud21
+        - /Axes2
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz/Selection
@@ -56,7 +56,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Marker
       Enabled: true
-      Marker Topic: /lidars
+      Marker Topic: /lidar1
       Name: Marker
       Namespaces:
         LiDAR: true
@@ -85,14 +85,14 @@ Visualization Manager:
       Length: 0.5
       Name: Axes
       Radius: 0.009999999776482582
-      Reference Frame: lidar_frame
+      Reference Frame: lidar1_frame
       Show Trail: false
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 1.123388409614563
-        Min Value: 0.7888809442520142
+        Max Value: 3.3890867233276367
+        Min Value: -3.1532483100891113
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -109,12 +109,84 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.009999999776482582
+      Size (m): 0.10000000149011612
       Style: Flat Squares
-      Topic: /point_cloud_data
+      Topic: /pcd_lidar1
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 3.829821825027466
+        Min Value: -4.008630752563477
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.10000000149011612
+      Style: Flat Squares
+      Topic: /pcd_lidar2
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /lidar3
+      Name: Marker
+      Namespaces:
+        LiDAR: true
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 3.784493923187256
+        Min Value: -4.020448684692383
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.10000000149011612
+      Style: Flat Squares
+      Topic: /pcd_lidar3
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /lidar2
+      Name: Marker
+      Namespaces:
+        LiDAR: true
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -144,7 +216,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 4.362975120544434
+      Distance: 29.322534561157227
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -152,18 +224,38 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 2.3583874702453613
-        Y: -0.36135733127593994
-        Z: 1.4072983264923096
-      Focal Shape Fixed Size: true
+        X: 7.077956199645996
+        Y: -0.5643396973609924
+        Z: 5.341245651245117
+      Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.10979700833559036
+      Pitch: -0.06020312383770943
       Target Frame: <Fixed Frame>
-      Yaw: 2.9900095462799072
-    Saved: ~
+      Yaw: 2.973585844039917
+    Saved:
+      - Class: rviz/Orbit
+        Distance: 12.761958122253418
+        Enable Stereo Rendering:
+          Stereo Eye Separation: 0.05999999865889549
+          Stereo Focal Distance: 1
+          Swap Stereo Eyes: false
+          Value: false
+        Field of View: 0.7853981852531433
+        Focal Point:
+          X: 19.917177200317383
+          Y: 4.061309337615967
+          Z: 6.010095596313477
+        Focal Shape Fixed Size: false
+        Focal Shape Size: 0.05000000074505806
+        Invert Z Axis: false
+        Name: Orbit
+        Near Clip Distance: 0.009999999776482582
+        Pitch: 0.8297964334487915
+        Target Frame: <Fixed Frame>
+        Yaw: 2.2085564136505127
 Window Geometry:
   Displays:
     collapsed: false
