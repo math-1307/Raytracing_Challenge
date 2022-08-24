@@ -10,8 +10,8 @@ from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
 import numpy as np
 import sensor_msgs.point_cloud2 as pc
-#from dynamic_reconfigure.server import Server
-#from dynamic_tutorials.cfg import TutorialsConfig
+from dynamic_reconfigure.server import Server
+from raytracer_pkg.cfg import lidar_poseConfig
 
 from raytracer_pkg.msg import represent_plane, represent_ray, rayArray
 #from raytracer_pkg import LiDAR
@@ -235,7 +235,11 @@ class PointCloud:
 						if((poiw[pt,2] >= np.min(crnrw[:,2])) and (poiw[pt,2] <= np.max(crnrw[:,2]))):
 							new_arr = np.append(new_arr, poiw[pt,:].reshape(1,3), axis = 0)
 							self.POI = new_arr.reshape(-1,3)
-
+				# if no points
+				if new_arr.any():
+					pass
+				else: self.POI = None
+				
 			except (tf2_ros.LookupException, tf2_ros.ConnectivityException, tf2_ros.ExtrapolationException):
 				print("Transforms from wall to world not yet available")
 				self.POI = None
@@ -258,6 +262,36 @@ def array_to_pc2(cloud_arr, stamp=None, frame_id=None):
 	cloud_arr = cloud_arr.reshape(-1,3)
 	pc2 = pc.create_cloud(header, fields, cloud_arr)
 	return pc2
+	
+def drcCallback(config, level):
+
+	l1x = float("{LiDAR1_x}".format(**config))
+	l1y = float("{LiDAR1_y}".format(**config))
+	l1z = float("{LiDAR1_z}".format(**config))
+	l1rol = int("{LiDAR1_roll}".format(**config))
+	l1pit = int("{LiDAR1_pitch}".format(**config))
+	l1yaw = int("{LiDAR1_yaw}".format(**config))
+	
+	l2x = float("{LiDAR2_x}".format(**config))
+	l2y = float("{LiDAR2_y}".format(**config))
+	l2z = float("{LiDAR2_z}".format(**config))
+	l2rol = int("{LiDAR2_roll}".format(**config))
+	l2pit = int("{LiDAR2_pitch}".format(**config))
+	l2yaw = int("{LiDAR2_yaw}".format(**config))
+	
+	l3x = float("{LiDAR3_x}".format(**config))
+	l3y = float("{LiDAR3_y}".format(**config))
+	l3z = float("{LiDAR3_z}".format(**config))
+	l3rol = int("{LiDAR3_roll}".format(**config))
+	l3pit = int("{LiDAR3_pitch}".format(**config))
+	l3yaw = int("{LiDAR3_yaw}".format(**config))
+	
+	global lidar_poses
+	lidar_poses = np.array([[l1x,l1y,l1z,l1rol,l1pit,l1yaw],[l2x,l2y,l2z,l2rol,l2pit,l2yaw],[l3x,l3y,l3z,l3rol,l3pit,l3yaw]])
+	
+	return config
+	
+
 
 if __name__ == '__main__':
 
@@ -266,11 +300,18 @@ if __name__ == '__main__':
 	tf_buffer = tf2_ros.Buffer()
 	tf2_listener = tf2_ros.TransformListener(tf_buffer)
 	
+	# for Dynamic Reconfiguration
+	drc = Server(lidar_poseConfig,drcCallback)
+	
 	rate = rospy.Rate(10) # 10hz
 	
+	
+	#lidar_poses = np.array([[0.5,0,1,0,2,0],[0,1,1,-5,2,10],[0,-1,1,5,2,-10]])
+
+
 	#lid_q = tf.transformations.quaternion_from_euler(np.deg2rad(0), np.deg2rad(2), np.deg2rad(0))
 	
-	lidar_poses = np.array([[0.5,0,1,0,2,0],[0,1,1,-5,2,10],[0,-1,1,5,2,-10]])
+	
 	#lidar_poses = np.array([[0.5,0,1,0,2,0],[0,1,1,-5,2,45],[0,-1,1,5,2,-45]])
 	#lidar_poses = np.array([[0.5,0,1,0,0,0],[0,1,1,0,0,0],[0,-1,1,0,0,0]])
 	
@@ -317,8 +358,8 @@ if __name__ == '__main__':
 		
 		pcd_topic = "/pcd_lidar"
 		pub_pcd = rospy.Publisher(pcd_topic, PointCloud2, queue_size=1)
-		print("Point Cloud Data of shape " + str(combinedPOI.shape))
-		print(combinedPOI)
+		print("Point Cloud Data of shape " + str(combinedPOI.shape) + " is being visualized")
+		#print(combinedPOI)
 		if combinedPOI.any():
 			cloud = PointCloud2()
 			cloud = array_to_pc2(combinedPOI, rospy.get_rostime(), 'world')	

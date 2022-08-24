@@ -1,0 +1,10 @@
+<launch>
+ 
+  <!-- The marker visualizer node -->
+  <node name="visualise_markers" type="viz_markers.py" pkg="raytracer_pkg" output="screen">
+  </node>
+
+  <!--launch rviz-->
+  <node type="rviz" name="rviz" pkg="rviz" respawn="false" args="-d $(find raytracer_pkg)/rviz_config/raytracing.rviz"/>
+
+</launch>

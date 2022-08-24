@@ -7,4 +7,8 @@
   <!--launch rviz-->
   <node type="rviz" name="rviz" pkg="rviz" respawn="false" args="-d $(find raytracer_pkg)/rviz_config/raytracing.rviz"/>
 
+  <!--launch recongifuration gui -->
+  <node pkg="rqt_reconfigure" type ="rqt_reconfigure" name="rqt_reconfigure">
+  </node>
+  
 </launch>
