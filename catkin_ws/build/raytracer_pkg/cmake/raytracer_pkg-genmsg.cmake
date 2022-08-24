@@ -29,7 +29,7 @@ add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" NAME_WE)
 add_custom_target(_raytracer_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" "geometry_msgs/Vector3:geometry_msgs/Point:raytracer_pkg/represent_ray:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "raytracer_pkg" "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg" "geometry_msgs/Vector3:geometry_msgs/Point:std_msgs/Header:raytracer_pkg/represent_ray"
 )
 
 #
@@ -53,7 +53,7 @@ _generate_msg_cpp(raytracer_pkg
 _generate_msg_cpp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -102,7 +102,7 @@ _generate_msg_eus(raytracer_pkg
 _generate_msg_eus(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -151,7 +151,7 @@ _generate_msg_lisp(raytracer_pkg
 _generate_msg_lisp(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -200,7 +200,7 @@ _generate_msg_nodejs(raytracer_pkg
 _generate_msg_nodejs(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -249,7 +249,7 @@ _generate_msg_py(raytracer_pkg
 _generate_msg_py(raytracer_pkg
   "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/rayArray.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/msg/represent_ray.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
 )
 
@@ -345,16 +345,6 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rayt
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
     DESTINATION ${genpy_INSTALL_DIR}
-    # skip all init files
-    PATTERN "__init__.py" EXCLUDE
-    PATTERN "__init__.pyc" EXCLUDE
-  )
-  # install init files which are not in the root folder of the generated code
-  install(
-    DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg
-    DESTINATION ${genpy_INSTALL_DIR}
-    FILES_MATCHING
-    REGEX "${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/raytracer_pkg/.+/__init__.pyc?$"
   )
 endif()
 if(TARGET std_msgs_generate_messages_py)
