@@ -24,5 +24,5 @@ source devel/setup.bash
 rosrun pcl_ros pointcloud_to_pcd input:=/pcd_lidar
 ```
 
-The implementation of the code can be seen in the [Implementation Video](actual URL to navigate)
+The implementation of the code can be seen in the [Implementation Video](https://github.com/math-1307/Raytracing_Challenge/blob/main/Results/raytracing_DB_implementation.mp4)
   
