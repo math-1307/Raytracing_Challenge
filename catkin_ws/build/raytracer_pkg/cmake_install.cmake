@@ -82,6 +82,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/raytracer_pkg" TYPE FILE FILES "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/include/raytracer_pkg/lidar_poseConfig.h")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/lib/python3/dist-packages/raytracer_pkg/cfg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages/raytracer_pkg" TYPE DIRECTORY FILES "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/lib/python3/dist-packages/raytracer_pkg/cfg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg/catkin_generated/installspace/raytracer_pkg.pc")
 endif()
 
@@ -101,6 +113,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raytracer_pkg" TYPE PROGRAM FILES "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg/catkin_generated/installspace/viz_markers.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/raytracer_pkg" TYPE PROGRAM FILES "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg/catkin_generated/installspace/raytracer.py")
 endif()
 

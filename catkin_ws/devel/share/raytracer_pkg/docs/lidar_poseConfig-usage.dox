@@ -1,0 +1,24 @@
+\subsubsection usage Usage
+\verbatim
+<node name="raytracer_node" pkg="raytracer_pkg" type="raytracer_node">
+  <param name="LiDAR1_x" type="double" value="0.5" />
+  <param name="LiDAR1_y" type="double" value="0.0" />
+  <param name="LiDAR1_z" type="double" value="1.0" />
+  <param name="LiDAR1_roll" type="int" value="0" />
+  <param name="LiDAR1_pitch" type="int" value="2" />
+  <param name="LiDAR1_yaw" type="int" value="0" />
+  <param name="LiDAR2_x" type="double" value="0.0" />
+  <param name="LiDAR2_y" type="double" value="1.0" />
+  <param name="LiDAR2_z" type="double" value="1.0" />
+  <param name="LiDAR2_roll" type="int" value="-5" />
+  <param name="LiDAR2_pitch" type="int" value="2" />
+  <param name="LiDAR2_yaw" type="int" value="10" />
+  <param name="LiDAR3_x" type="double" value="0.0" />
+  <param name="LiDAR3_y" type="double" value="-1.0" />
+  <param name="LiDAR3_z" type="double" value="1.0" />
+  <param name="LiDAR3_roll" type="int" value="5" />
+  <param name="LiDAR3_pitch" type="int" value="2" />
+  <param name="LiDAR3_yaw" type="int" value="-10" />
+</node>
+\endverbatim
+

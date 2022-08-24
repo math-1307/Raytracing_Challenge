@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(raytracer_pkg_EXPORTED_TARGETS "raytracer_pkg_generate_messages_cpp;raytracer_pkg_generate_messages_eus;raytracer_pkg_generate_messages_lisp;raytracer_pkg_generate_messages_nodejs;raytracer_pkg_generate_messages_py")
+set(raytracer_pkg_EXPORTED_TARGETS "raytracer_pkg_generate_messages_cpp;raytracer_pkg_generate_messages_eus;raytracer_pkg_generate_messages_lisp;raytracer_pkg_generate_messages_nodejs;raytracer_pkg_generate_messages_py;raytracer_pkg_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${raytracer_pkg_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

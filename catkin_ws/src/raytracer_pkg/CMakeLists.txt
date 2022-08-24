@@ -18,12 +18,14 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   geometry_msgs
   message_generation
+  dynamic_reconfigure
 )
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
 catkin_python_setup()
+
 
 ################################################
 ## Declare ROS messages, services and actions ##
@@ -88,11 +90,12 @@ generate_messages( DEPENDENCIES std_msgs geometry_msgs )
 ##   * uncomment the "generate_dynamic_reconfigure_options" section below
 ##     and list every .cfg file to be processed
 
-## Generate dynamic reconfigure parameters in the 'cfg' folder
-# generate_dynamic_reconfigure_options(
-#   cfg/DynReconf1.cfg
-#   cfg/DynReconf2.cfg
-# )
+#add dynamic reconfigure api
+#find_package(catkin REQUIRED dynamic_reconfigure)
+generate_dynamic_reconfigure_options(
+  cfg/lidar_pose.cfg
+  #...
+)
 
 ###################################
 ## catkin specific configuration ##
@@ -161,10 +164,10 @@ ${catkin_INCLUDE_DIRS}
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  src/raytracer.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
@@ -207,15 +210,7 @@ ${catkin_INCLUDE_DIRS}
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+# make sure configure headers are built before any node using them
+#add_dependencies(src/raytracer.py ${PROJECT_NAME}_gencfg)
 
-catkin_install_python(PROGRAMS src/viz_markers.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
 
-#catkin_install_python(PROGRAMS src/LiDAR.py
-#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-#)
-
-#catkin_install_python(PROGRAMS src/raytracer.py
-#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-#)

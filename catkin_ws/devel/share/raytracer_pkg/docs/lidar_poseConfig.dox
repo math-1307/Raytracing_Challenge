@@ -1,0 +1,23 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~LiDAR1_x" : \b [double] x-coordinate of LiDAR1 min: -10.0, default: 0.5, max: 10.0
+- \b "~LiDAR1_y" : \b [double] x-coordinate of LiDAR1 min: -10.0, default: 0.0, max: 10.0
+- \b "~LiDAR1_z" : \b [double] x-coordinate of LiDAR1 min: -10.0, default: 1.0, max: 10.0
+- \b "~LiDAR1_roll" : \b [int] x-coordinate of LiDAR1 min: -90, default: 0, max: 90
+- \b "~LiDAR1_pitch" : \b [int] x-coordinate of LiDAR1 min: -90, default: 2, max: 90
+- \b "~LiDAR1_yaw" : \b [int] x-coordinate of LiDAR1 min: -90, default: 0, max: 90
+- \b "~LiDAR2_x" : \b [double] x-coordinate of LiDAR2 min: -10.0, default: 0.0, max: 10.0
+- \b "~LiDAR2_y" : \b [double] x-coordinate of LiDAR2 min: -10.0, default: 1.0, max: 10.0
+- \b "~LiDAR2_z" : \b [double] x-coordinate of LiDAR2 min: -10.0, default: 1.0, max: 10.0
+- \b "~LiDAR2_roll" : \b [int] x-coordinate of LiDAR2 min: -90, default: -5, max: 90
+- \b "~LiDAR2_pitch" : \b [int] x-coordinate of LiDAR2 min: -90, default: 2, max: 90
+- \b "~LiDAR2_yaw" : \b [int] x-coordinate of LiDAR2 min: -90, default: 10, max: 90
+- \b "~LiDAR3_x" : \b [double] x-coordinate of LiDAR3 min: -10.0, default: 0.0, max: 10.0
+- \b "~LiDAR3_y" : \b [double] x-coordinate of LiDAR3 min: -10.0, default: -1.0, max: 10.0
+- \b "~LiDAR3_z" : \b [double] x-coordinate of LiDAR3 min: -10.0, default: 1.0, max: 10.0
+- \b "~LiDAR3_roll" : \b [int] x-coordinate of LiDAR3 min: -90, default: 5, max: 90
+- \b "~LiDAR3_pitch" : \b [int] x-coordinate of LiDAR3 min: -90, default: 2, max: 90
+- \b "~LiDAR3_yaw" : \b [int] x-coordinate of LiDAR3 min: -90, default: -10, max: 90
+

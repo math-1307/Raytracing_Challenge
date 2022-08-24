@@ -1,7 +1,7 @@
- <launch>
+<launch>
  
   <!-- The marker visualizer node -->
-  <node name="visualize_markers" type="viz_markers.py" pkg="raytracer_pkg" output="screen">
+  <node name="raytracer_node" type="raytracer.py" pkg="raytracer_pkg" output="screen">
   </node>
 
   <!--launch rviz-->
