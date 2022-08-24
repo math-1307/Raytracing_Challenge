@@ -5,7 +5,7 @@ import tf2_ros
 from tf.transformations import quaternion_matrix
 import rospy
 from visualization_msgs.msg import Marker, MarkerArray
-from geometry_msgs.msg import Point, Quaternion
+from geometry_msgs.msg import Point, Quaternion, Pose
 from sensor_msgs.msg import PointCloud2, PointField
 from std_msgs.msg import Header
 import numpy as np
@@ -25,6 +25,9 @@ class LiDAR:
 		
 		lidar_topic = "/lidar"+str(self.lidar_id)
 		self.pub_lidar_marker = rospy.Publisher(lidar_topic, Marker, queue_size=1)
+		
+		ray_topic = "/ray" + str(self.lidar_id) + "_array"
+		self.pub_rays = rospy.Publisher(ray_topic, MarkerArray, queue_size=1)
 
 		# Marker Properties
 		self.lidar_marker = Marker()
@@ -63,6 +66,7 @@ class LiDAR:
 		
 		self.defineRays()
 		
+		self.pub_rays.publish(self.rays_marker)
 		self.pub_lidar_marker.publish(self.lidar_marker)
 		
 	def defineRays(self):
@@ -83,6 +87,39 @@ class LiDAR:
 		
 		#mag = (np.sqrt((np.sum(np.multiply(self.rays,self.rays), axis = 1)).reshape(-1,1)))
 		#self.rays = np.divide(self.rays,mag)
+		
+		# Array of Markers for rays
+		self.rays_marker = MarkerArray()
+		for i in range(pts_array.shape[0]):
+
+			#q = tf.transformations.quaternion_from_euler(np.deg2rad(pts_array[i,0]), np.deg2rad(pts_array[i,1]), np.deg2rad(pts_array[i,2]))	
+		
+			rm = Marker()
+			rm.ns = "ray"+str(i+1)
+			rm.header.frame_id = self.lidar_frame
+			rm.id = i+1
+			rm.header.stamp = rospy.get_rostime()
+			rm.type = Marker.ARROW
+			rm.action = Marker.MODIFY
+			rm.lifetime = rospy.Duration(0)
+			rm.scale.x = 0.01
+			rm.scale.y = 0.01
+			rm.scale.z = 0.01
+			rm.color.r = 1.0
+			rm.color.g = 0.0
+			rm.color.b = 0.0
+			rm.color.a = 1.0
+			rm.points = [Point(), Point()]
+			rm.points[0].x = 0.0
+			rm.points[0].y = 0.0
+			rm.points[0].z = 0.0
+			rm.points[1].x = 30.0 * pts_array[i,0]
+			rm.points[1].y = 30.0 * pts_array[i,1]
+			rm.points[1].z = 30.0 * pts_array[i,2]
+			print("rays points")
+			print(rm.points)
+			
+			self.rays_marker.markers.append(rm)
 		
 class Wall:
 

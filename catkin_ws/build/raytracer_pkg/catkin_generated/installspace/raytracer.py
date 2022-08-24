@@ -25,9 +25,10 @@ class LiDAR:
 		self.lidar_id = lidar_num
 		
 		lidar_topic = "/lidar"+str(self.lidar_id)
-		ray_topic = "/ray"+str(self.lidar_id)
 		self.pub_lidar_marker = rospy.Publisher(lidar_topic, Marker, queue_size=1)
-		#self.pub_rays = rospy.Publisher(ray_topic, MarkerArray, queue_size=1)
+		
+		ray_topic = "/ray" + str(self.lidar_id) + "_array"
+		self.pub_rays = rospy.Publisher(ray_topic, MarkerArray, queue_size=1)
 
 		# Marker Properties
 		self.lidar_marker = Marker()
@@ -66,8 +67,9 @@ class LiDAR:
 		
 		self.defineRays()
 		
+		self.pub_rays.publish(self.rays_marker)
 		self.pub_lidar_marker.publish(self.lidar_marker)
-		#self.pub_rays.publish(self.rays_marker)
+		
 		
 	def defineRays(self):
 		
@@ -87,10 +89,7 @@ class LiDAR:
 		
 		# Array of Markers for rays
 		self.rays_marker = MarkerArray()
-		rpose = Pose()
-		for i in range(pts_array.shape[0]):
-
-			q = tf.transformations.quaternion_from_euler(np.deg2rad(pts_array[i,0]), np.deg2rad(pts_array[i,1]), np.deg2rad(pts_array[i,2]))	
+		for i in range(pts_array.shape[0]):	
 		
 			rm = Marker()
 			rm.ns = "ray"+str(i+1)
@@ -98,24 +97,27 @@ class LiDAR:
 			rm.id = i+1
 			rm.header.stamp = rospy.get_rostime()
 			rm.type = Marker.ARROW
-			rm.action = Marker.ADD
+			rm.action = Marker.MODIFY
 			rm.lifetime = rospy.Duration(0)
-			rm.scale.x = 30.0
+			rm.scale.x = 0.01
 			rm.scale.y = 0.01
 			rm.scale.z = 0.01
 			rm.color.r = 1.0
 			rm.color.g = 0.0
 			rm.color.b = 0.0
 			rm.color.a = 1.0
-			rm.pose.position.x = 0
-			rm.pose.position.y = 0
-			rm.pose.position.z = 0
-			rm.pose.orientation.x = q[0]
-			rm.pose.orientation.y = q[1]
-			rm.pose.orientation.z = q[2]
-			rm.pose.orientation.w = q[3]
+			rm.points = [Point(), Point()]
+			rm.points[0].x = 0.0
+			rm.points[0].y = 0.0
+			rm.points[0].z = 0.0
+			rm.points[1].x = 30.0 * pts_array[i,0]
+			rm.points[1].y = 30.0 * pts_array[i,1]
+			rm.points[1].z = 30.0 * pts_array[i,2]
+			print("rays points")
+			print(rm.points)
 			
 			self.rays_marker.markers.append(rm)
+		
 class Wall:
 
 	def __init__(self):
