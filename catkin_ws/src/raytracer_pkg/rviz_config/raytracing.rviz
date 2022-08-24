@@ -12,6 +12,7 @@ Panels:
         - /Axes4
         - /Marker1
         - /Marker1/Namespaces1
+        - /Marker4
       Splitter Ratio: 0.5
     Tree Height: 549
   - Class: rviz/Selection
@@ -182,7 +183,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 6.32405424118042
+      Distance: 2.736217498779297
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -198,9 +199,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.16079780459403992
+      Pitch: 0.04579775035381317
       Target Frame: <Fixed Frame>
-      Yaw: 3.1415934562683105
+      Yaw: 3.2284183502197266
     Saved:
       - Class: rviz/Orbit
         Distance: 12.761958122253418
