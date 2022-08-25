@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
 # Source directory: /usr/src/googletest/googletest
-# Build directory: /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/gtest/googletest
+# Build directory: /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/gtest/googletest
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

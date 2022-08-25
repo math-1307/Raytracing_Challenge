@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg/src/raytracer.py'
+python_script = '/home/vamika/ROS/Raytracing_Challenge/catkin_ws/src/raytracer_pkg/src/raytracer.py'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

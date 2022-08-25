@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/demogorgon/Projects/Raytracing_Task/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/vamika/ROS/Raytracing_Challenge/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build
+CMAKE_BINARY_DIR = /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build
 
 # Utility rule file for raytracer_pkg_geneus.
 
@@ -63,10 +63,10 @@ raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build: raytracer_pkg_geneus
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build
 
 raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/clean:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg && $(CMAKE_COMMAND) -P CMakeFiles/raytracer_pkg_geneus.dir/cmake_clean.cmake
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/raytracer_pkg && $(CMAKE_COMMAND) -P CMakeFiles/raytracer_pkg_geneus.dir/cmake_clean.cmake
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/clean
 
 raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/depend:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/demogorgon/Projects/Raytracing_Task/catkin_ws/src /home/demogorgon/Projects/Raytracing_Task/catkin_ws/src/raytracer_pkg /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vamika/ROS/Raytracing_Challenge/catkin_ws/src /home/vamika/ROS/Raytracing_Challenge/catkin_ws/src/raytracer_pkg /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/raytracer_pkg /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/depend
 

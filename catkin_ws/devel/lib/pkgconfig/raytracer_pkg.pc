@@ -1,8 +1,8 @@
-prefix=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel
+prefix=/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel
 
 Name: raytracer_pkg
 Description: Description of raytracer_pkg
 Version: 0.0.0
-Cflags: -I/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/include
+Cflags: -I/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime

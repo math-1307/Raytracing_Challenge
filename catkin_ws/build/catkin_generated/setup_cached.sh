@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/demogorgon/Projects/Raytracing_Task/catkin_ws/build'
+export CMAKE_PREFIX_PATH="/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/vamika/ROS/Raytracing_Challenge/catkin_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/vamika/ROS/Raytracing_Challenge/catkin_ws/src:$ROS_PACKAGE_PATH"

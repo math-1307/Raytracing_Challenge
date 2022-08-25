@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/rayArray.lisp"
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/represent_plane.lisp"
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/represent_ray.lisp"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/rayArray.lisp"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/represent_plane.lisp"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/share/common-lisp/ros/raytracer_pkg/msg/represent_ray.lisp"
   "CMakeFiles/raytracer_pkg_generate_messages_lisp"
 )
 

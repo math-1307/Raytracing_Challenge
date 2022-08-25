@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/demogorgon/Projects/Raytracing_Task/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/vamika/ROS/Raytracing_Challenge/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build
+CMAKE_BINARY_DIR = /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/CMakeFiles /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/raytracer_pkg/CMakeFiles/progress.marks
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build/CMakeFiles 0
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/CMakeFiles /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/raytracer_pkg/CMakeFiles/progress.marks
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/clean
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/preinstall
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/preinstall
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ raytracer_pkg_genpy: raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/rule
 
 # fast build rule for target.
 raytracer_pkg_genpy/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_genpy.dir/build
 .PHONY : raytracer_pkg_genpy/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ geometry_msgs_generate_messages_py: raytracer_pkg/CMakeFiles/geometry_msgs_gener
 
 # fast build rule for target.
 geometry_msgs_generate_messages_py/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ raytracer_pkg_gennodejs: raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/ru
 
 # fast build rule for target.
 raytracer_pkg_gennodejs/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gennodejs.dir/build
 .PHONY : raytracer_pkg_gennodejs/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ dynamic_reconfigure_generate_messages_cpp: raytracer_pkg/CMakeFiles/dynamic_reco
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ geometry_msgs_generate_messages_nodejs: raytracer_pkg/CMakeFiles/geometry_msgs_g
 
 # fast build rule for target.
 geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ geometry_msgs_generate_messages_cpp: raytracer_pkg/CMakeFiles/geometry_msgs_gene
 
 # fast build rule for target.
 geometry_msgs_generate_messages_cpp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : geometry_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ raytracer_pkg_gencpp: raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/rule
 
 # fast build rule for target.
 raytracer_pkg_gencpp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gencpp.dir/build
 .PHONY : raytracer_pkg_gencpp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ geometry_msgs_generate_messages_lisp: raytracer_pkg/CMakeFiles/geometry_msgs_gen
 
 # fast build rule for target.
 geometry_msgs_generate_messages_lisp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
 .PHONY : geometry_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ std_msgs_generate_messages_eus: raytracer_pkg/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ std_msgs_generate_messages_py: raytracer_pkg/CMakeFiles/std_msgs_generate_messag
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ raytracer_pkg_generate_messages_eus: raytracer_pkg/CMakeFiles/raytracer_pkg_gene
 
 # fast build rule for target.
 raytracer_pkg_generate_messages_eus/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_eus.dir/build
 .PHONY : raytracer_pkg_generate_messages_eus/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ geometry_msgs_generate_messages_eus: raytracer_pkg/CMakeFiles/geometry_msgs_gene
 
 # fast build rule for target.
 geometry_msgs_generate_messages_eus/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ std_msgs_generate_messages_nodejs: raytracer_pkg/CMakeFiles/std_msgs_generate_me
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ raytracer_pkg_gencfg: raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/rule
 
 # fast build rule for target.
 raytracer_pkg_gencfg/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_gencfg.dir/build
 .PHONY : raytracer_pkg_gencfg/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ std_msgs_generate_messages_cpp: raytracer_pkg/CMakeFiles/std_msgs_generate_messa
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ _catkin_empty_exported_target: raytracer_pkg/CMakeFiles/_catkin_empty_exported_t
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build.make raytracer_pkg/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ raytracer_pkg_generate_messages_lisp: raytracer_pkg/CMakeFiles/raytracer_pkg_gen
 
 # fast build rule for target.
 raytracer_pkg_generate_messages_lisp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_lisp.dir/build
 .PHONY : raytracer_pkg_generate_messages_lisp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ dynamic_reconfigure_generate_messages_lisp: raytracer_pkg/CMakeFiles/dynamic_rec
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ dynamic_reconfigure_generate_messages_nodejs: raytracer_pkg/CMakeFiles/dynamic_r
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ raytracer_pkg_geneus: raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/rule
 
 # fast build rule for target.
 raytracer_pkg_geneus/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_geneus.dir/build
 .PHONY : raytracer_pkg_geneus/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ std_msgs_generate_messages_lisp: raytracer_pkg/CMakeFiles/std_msgs_generate_mess
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make raytracer_pkg/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ dynamic_reconfigure_generate_messages_py: raytracer_pkg/CMakeFiles/dynamic_recon
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ raytracer_pkg_generate_messages_nodejs: raytracer_pkg/CMakeFiles/raytracer_pkg_g
 
 # fast build rule for target.
 raytracer_pkg_generate_messages_nodejs/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_nodejs.dir/build
 .PHONY : raytracer_pkg_generate_messages_nodejs/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ _raytracer_pkg_generate_messages_check_deps_represent_plane: raytracer_pkg/CMake
 
 # fast build rule for target.
 _raytracer_pkg_generate_messages_check_deps_represent_plane/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_plane.dir/build
 .PHONY : _raytracer_pkg_generate_messages_check_deps_represent_plane/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ dynamic_reconfigure_generate_messages_eus: raytracer_pkg/CMakeFiles/dynamic_reco
 
 # fast build rule for target.
 dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ dynamic_reconfigure_gencfg: raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.
 
 # fast build rule for target.
 dynamic_reconfigure_gencfg/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make raytracer_pkg/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ raytracer_pkg_generate_messages: raytracer_pkg/CMakeFiles/raytracer_pkg_generate
 
 # fast build rule for target.
 raytracer_pkg_generate_messages/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages.dir/build
 .PHONY : raytracer_pkg_generate_messages/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ raytracer_pkg_generate_messages_py: raytracer_pkg/CMakeFiles/raytracer_pkg_gener
 
 # fast build rule for target.
 raytracer_pkg_generate_messages_py/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_py.dir/build
 .PHONY : raytracer_pkg_generate_messages_py/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ raytracer_pkg_genlisp: raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/rule
 
 # fast build rule for target.
 raytracer_pkg_genlisp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_genlisp.dir/build
 .PHONY : raytracer_pkg_genlisp/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ _raytracer_pkg_generate_messages_check_deps_represent_ray: raytracer_pkg/CMakeFi
 
 # fast build rule for target.
 _raytracer_pkg_generate_messages_check_deps_represent_ray/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_represent_ray.dir/build
 .PHONY : _raytracer_pkg_generate_messages_check_deps_represent_ray/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ _raytracer_pkg_generate_messages_check_deps_rayArray: raytracer_pkg/CMakeFiles/_
 
 # fast build rule for target.
 _raytracer_pkg_generate_messages_check_deps_rayArray/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/build.make raytracer_pkg/CMakeFiles/_raytracer_pkg_generate_messages_check_deps_rayArray.dir/build
 .PHONY : _raytracer_pkg_generate_messages_check_deps_rayArray/fast
 
 # Convenience name for target.
 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/rule:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/rule
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/rule
 .PHONY : raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -644,7 +644,7 @@ raytracer_pkg_generate_messages_cpp: raytracer_pkg/CMakeFiles/raytracer_pkg_gene
 
 # fast build rule for target.
 raytracer_pkg_generate_messages_cpp/fast:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/build
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(MAKE) -f raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/build.make raytracer_pkg/CMakeFiles/raytracer_pkg_generate_messages_cpp.dir/build
 .PHONY : raytracer_pkg_generate_messages_cpp/fast
 
 # Help Target
@@ -703,6 +703,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/demogorgon/Projects/Raytracing_Task/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/vamika/ROS/Raytracing_Challenge/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

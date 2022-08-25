@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/include/raytracer_pkg/rayArray.h"
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/include/raytracer_pkg/represent_plane.h"
-  "/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/include/raytracer_pkg/represent_ray.h"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/include/raytracer_pkg/rayArray.h"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/include/raytracer_pkg/represent_plane.h"
+  "/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/include/raytracer_pkg/represent_ray.h"
   "CMakeFiles/raytracer_pkg_generate_messages_cpp"
 )
 

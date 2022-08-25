@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 # generated from dynamic_reconfigure/cmake/setup_custom_pythonpath.sh.in
 
-PYTHONPATH=/home/demogorgon/Projects/Raytracing_Task/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH
+PYTHONPATH=/home/vamika/ROS/Raytracing_Challenge/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH
 exec /usr/bin/python3 "$@"

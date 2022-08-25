@@ -113,8 +113,6 @@ class LiDAR:
 			rm.points[1].x = 30.0 * pts_array[i,0]
 			rm.points[1].y = 30.0 * pts_array[i,1]
 			rm.points[1].z = 30.0 * pts_array[i,2]
-			print("rays points")
-			print(rm.points)
 			
 			self.rays_marker.markers.append(rm)
 		
@@ -185,14 +183,11 @@ class PointCloud:
 		
 		self.calc_POI(lidar_obj, wall_obj, tf_buffer)
 		
-		#self.POI.reshape(-1,3)
-			
-		
 	def calc_POI(self,lidar_obj, plane, tf_buffer):	
 
 		try:
 			
-			trans = tf_buffer.lookup_transform(lidar_obj.lidar_frame, 'wall_frame', rospy.Time())#, rospy.Duration(1.0)) # frames from, to, time
+			trans = tf_buffer.lookup_transform(lidar_obj.lidar_frame, 'wall_frame', rospy.Time()) # frames from, to, time
 
 			q = [trans.transform.rotation.x, trans.transform.rotation.y, trans.transform.rotation.z, trans.transform.rotation.w]
 			tr_mat = np.matrix(quaternion_matrix(q))
@@ -201,7 +196,6 @@ class PointCloud:
 			tr_mat[2,3] = trans.transform.translation.z
 			
 			tr_mat = np.asarray(tr_mat).reshape(4,4)
-
 
 			rays = lidar_obj.rays			
 			crnr = plane.corners
@@ -233,7 +227,7 @@ class PointCloud:
 			poi = np.asarray(poi)
 			
 			try:
-				trans2 = tf_buffer.lookup_transform('world', lidar_obj.lidar_frame, rospy.Time())#, rospy.Duration(1.0)) # frames from, to
+				trans2 = tf_buffer.lookup_transform('world', lidar_obj.lidar_frame, rospy.Time()) # frames from, to
 				q = [trans2.transform.rotation.x, trans2.transform.rotation.y, trans2.transform.rotation.z, trans2.transform.rotation.w]
 				tr2wrld = np.matrix(quaternion_matrix(q))
 				tr2wrld[0,3] = trans2.transform.translation.x
@@ -243,6 +237,7 @@ class PointCloud:
 				# Points of Intersection in the world frame
 				poiw = np.append((poi.T),np.ones((1,poi.shape[0])),axis=0) # 4x600
 				poiw = tr2wrld @ poiw # 4x600
+				
 				poiw = poiw / poiw[-1,:] # 4x600
 				poiw = poiw[0:-1,:].T # 600x3
 				poiw = poiw.tolist()
